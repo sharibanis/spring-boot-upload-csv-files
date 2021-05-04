@@ -17,12 +17,6 @@ spring.servlet.multipart.max-request-size=2MB
 ```
 The MySQL DB schema can be created by running the schema.sql script.
 
-
-
-
-
-
-
 ## Run Spring Boot application
 ```
 mvn spring-boot:run
