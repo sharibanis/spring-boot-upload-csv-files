@@ -51,7 +51,7 @@ public class CSVController {
   }
 
   @GetMapping("/tutorials")
-  public ResponseEntity<List<Tutorial>> getAllTutorials() {
+  public ResponseEntity<List<Tutorial>> getAllFiles() {
     try {
       List<Tutorial> tutorials = fileService.getAllTutorials();
 
@@ -67,7 +67,7 @@ public class CSVController {
 
   @GetMapping("/download")
   public ResponseEntity<Resource> getFile() {
-    String filename = "tutorials.csv";
+    String filename = "data.csv";
     InputStreamResource file = new InputStreamResource(fileService.load());
 
     return ResponseEntity.ok()
