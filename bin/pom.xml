@@ -9,7 +9,7 @@
 		<version>2.2.7.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.sharib</groupId>
+	<groupId>com.bezkoder</groupId>
 	<artifactId>spring-boot-upload-csv-files</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-boot-upload-csv-files</name>
