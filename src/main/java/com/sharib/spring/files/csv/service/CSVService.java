@@ -20,7 +20,6 @@ import com.sharib.spring.files.csv.model.Tutorial;
 import com.sharib.spring.files.csv.repository.TutorialRepository;
 
 @Service
-@Transactional
 public class CSVService {
   @Autowired
   TutorialRepository repository;
@@ -52,7 +51,7 @@ public class CSVService {
             		+ "ON DUPLICATE KEY UPDATE login = '" + login +"', " 
             		+ "name = '" + name + "',  salary = " + salary ;
             
-          //System.out.println("INSERTing: " + sql);
+          System.out.println("INSERTing: " + sql);
           stmt.executeUpdate(sql);
           con.commit();
           //System.out.println("INSERTed: " + sql);
@@ -65,7 +64,7 @@ public class CSVService {
         System.out.println(e1);
         if (con != null) {
         	try {
-        		System.err.print("Transaction is being rolled back.");
+        		System.err.println("Transaction is being rolled back.");
                 con.rollback();
         	} catch (SQLException e2) {
                 System.out.println(e2);

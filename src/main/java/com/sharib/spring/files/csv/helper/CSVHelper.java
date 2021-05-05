@@ -23,15 +23,17 @@ import com.sharib.spring.files.csv.model.Tutorial;
 
 public class CSVHelper {
   public static String TYPE = "text/csv";
+  public static String TYPE1 = "application/vnd.ms-excel";
   static String[] HEADERs = { "id", "login", "name", "salary" };
 
   public static boolean hasCSVFormat(MultipartFile file) {
-
-    if (!TYPE.equals(file.getContentType())) {
-      return false;
+	  
+	  System.out.println("file.getContentType() "+file.getContentType());
+    if (TYPE.equals(file.getContentType()) || TYPE1.equals(file.getContentType())) {
+      return true;
     }
 
-    return true;
+    return false;
   }
 
   public static List<Tutorial> csvToTutorials(InputStream is) {
