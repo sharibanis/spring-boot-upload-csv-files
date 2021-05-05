@@ -16,7 +16,7 @@ Let’s define the maximum file size that can be uploaded in application.propert
 spring.servlet.multipart.max-file-size=2MB
 spring.servlet.multipart.max-request-size=2MB
 ```
-The MySQL DB schema can be created by running the schema.sql script.
+The MySQL DB schema can be created by running the `schema.sql` script.
 
 ## Run Spring Boot application
 ```
