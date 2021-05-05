@@ -6,11 +6,9 @@ In controller package, we create CSVController class for Rest APIs.
 
 – @Controller annotation indicates that this is a controller.
 
-– @GetMapping and @PostMapping annotation is for mapping HTTP GET & POST requests onto specific handler methods:
+– @PostMapping annotation is for mapping HTTP POST requests onto specific handler methods:
 
 POST /upload: uploadFile()
-
-GET /tutorials: getAllFiles()
 
 Let’s define the maximum file size that can be uploaded in application.properties as following:
 
